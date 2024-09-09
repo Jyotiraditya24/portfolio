@@ -2,40 +2,47 @@ import React from "react";
 import { SiMinutemailer } from "react-icons/si";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import reactIcon from "../assets/icons8-react.svg";
+import graphQlIcon from "../assets/icons8-graphql.svg";
+import mongoDBIcon from "../assets/icons8-mongodb.svg";
+import tsIcon from "../assets/icons8-typescript.svg";
+import tailwindcssIcon from "../assets/icons8-tailwindcss.svg";
+import heroImg from "../assets/githubstreak.png";
+import productOneImg from "../assets/project-1.png";
 
 const Landing = () => {
-  useGSAP(() => {
-    gsap.from(".one", {
-      x: -100,
-      duration: 1,
-      delay: 1,
-    });
-    gsap.from(".two", {
-      scale: 0,
-      duration: 1,
-      delay: 1,
-    });
-    gsap.from(".three", {
-      y: 200,
-      duration: 1,
-      delay: 1,
-    });
-    gsap.from(".four", {
-      y: 300,
-      duration: 1,
-      delay: 1,
-    });
-    gsap.from(".five", {
-      x: 200,
-      duration: 1,
-      delay: 1,
-    });
-    gsap.from(".six", {
-      y: 100,
-      duration: 1,
-      delay: 1,
-    });
-  });
+  // useGSAP(() => {
+  //   gsap.from(".one", {
+  //     x: -100,
+  //     duration: 1,
+  //     delay: 1,
+  //   });
+  //   gsap.from(".two", {
+  //     scale: 0,
+  //     duration: 1,
+  //     delay: 1,
+  //   });
+  //   gsap.from(".three", {
+  //     y: 200,
+  //     duration: 1,
+  //     delay: 1,
+  //   });
+  //   gsap.from(".four", {
+  //     y: 300,
+  //     duration: 1,
+  //     delay: 1,
+  //   });
+  //   gsap.from(".five", {
+  //     x: 200,
+  //     duration: 1,
+  //     delay: 1,
+  //   });
+  //   gsap.from(".six", {
+  //     y: 100,
+  //     duration: 1,
+  //     delay: 1,
+  //   });
+  // });
   return (
     <div className="w-full grid grid-cols-12 gap-x-4">
       {/* LEFT SIDE OF GRID */}
@@ -43,7 +50,7 @@ const Landing = () => {
         {/* 1st */}
         <div className="one col-span-5 bg-[#343233] text-white rounded-xl pl-8 flex flex-col pt-2 pb-10 gap-y-10">
           <div className="flex flex-row w-full justify-end items-center p-5">
-            <div className="rounded-full h-[100px] w-[100px] bg-white"></div>
+            <img src={heroImg} alt="" />
           </div>
           <div className="text-5xl font-playwrite text-white">Full Stack</div>
           <div className="text-5xl font-playwrite text-white">
@@ -51,7 +58,29 @@ const Landing = () => {
           </div>
         </div>
         {/* 2nd */}
-        <div className="two col-span-3 bg-[#3B5639] text-white rounded-xl"></div>
+        <div className="two col-span-3 bg-[#3B5639] text-white rounded-xl">
+          <div className="p-4 flex flex-col gap-y-3">
+            <h1 className="text-center font-asil text-xl">Skills</h1>
+            <div className="flex flex-row justify-between items-center flex-wrap gap-y-4">
+              <div className="basis-1/4">
+                <img src={reactIcon} alt="" />
+              </div>
+              <div className="basis-1/4">
+                <img src={graphQlIcon} alt="" />
+              </div>
+
+              <div className="basis-1/4">
+                <img src={mongoDBIcon} alt="" />
+              </div>
+              <div className="basis-1/4">
+                <img src={tsIcon} alt="" />
+              </div>
+              <div className="basis-1/4">
+                <img src={tailwindcssIcon} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
         {/* 3rd */}
         <div className="three col-span-4 bg-[#c7B144] text-white flex flex-col rounded-xl px-6">
           <div className="flex flex-row w-full justify-start items-center py-4">
@@ -84,7 +113,23 @@ const Landing = () => {
 
       {/* RIGHT SIDE OF GRID */}
       <div className=" col-span-4 rounded-xl grid grid-rows-12 gap-y-4">
-        <div className="five bg-[#D2D4AD] text-white row-span-10 rounded-xl"></div>
+        <div className="five bg-[#D2D4AD] text-black row-span-10 rounded-xl flex flex-col p-2">
+          {/* 1st project */}
+          <div className="w-full rounded-xl shadow-2xl p-2">
+            <img src={productOneImg} alt="" className="h-[150px] w-full" />
+            <div className="py-2 mb-1">
+              <div className="flex flex-row justify-between">
+                <h1 className="font-bold font-asil">E-Commerce DashBoard</h1>
+                <a href="https://dashboard-lilac-phi.vercel.app/">Link</a>
+              </div>
+              <p className="font-asil">
+                Lorem ipsum dolor sit. Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+
+            {/* 2nd Project */}
+          </div>
+        </div>
 
         <div className="six bg-[#7B3C45] text-white row-span-2 rounded-xl">
           <div className="flex flex-row w-full justify-between items-center h-full px-10 font-asil">
