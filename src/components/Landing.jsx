@@ -11,38 +11,47 @@ import heroImg from "../assets/githubstreak.png";
 import productOneImg from "../assets/project-1.png";
 
 const Landing = () => {
-  // useGSAP(() => {
-  //   gsap.from(".one", {
-  //     x: -100,
-  //     duration: 1,
-  //     delay: 1,
-  //   });
-  //   gsap.from(".two", {
-  //     scale: 0,
-  //     duration: 1,
-  //     delay: 1,
-  //   });
-  //   gsap.from(".three", {
-  //     y: 200,
-  //     duration: 1,
-  //     delay: 1,
-  //   });
-  //   gsap.from(".four", {
-  //     y: 300,
-  //     duration: 1,
-  //     delay: 1,
-  //   });
-  //   gsap.from(".five", {
-  //     x: 200,
-  //     duration: 1,
-  //     delay: 1,
-  //   });
-  //   gsap.from(".six", {
-  //     y: 100,
-  //     duration: 1,
-  //     delay: 1,
-  //   });
-  // });
+  useGSAP(() => {
+    let b = window.innerWidth / 2;
+    let l = window.innerHeight / 2;
+    gsap.from(".one", {
+      x: l,
+      y: b,
+      duration: 1,
+      delay: 1,
+    });
+    gsap.from(".two", {
+      x: l,
+      y: b,
+      scale: 0,
+      duration: 1,
+      delay: 1,
+    });
+    gsap.from(".three", {
+      x: l,
+      y: b,
+      duration: 1,
+      delay: 1,
+    });
+    gsap.from(".four", {
+      x: l,
+      y: b,
+      duration: 1,
+      delay: 1,
+    });
+    gsap.from(".five", {
+      x: l,
+      y: b,
+      duration: 1,
+      delay: 1,
+    });
+    gsap.from(".six", {
+      x: l,
+      y: b,
+      duration: 1,
+      delay: 1,
+    });
+  });
   return (
     <div className="w-full grid grid-cols-12 gap-x-4">
       {/* LEFT SIDE OF GRID */}
@@ -113,9 +122,9 @@ const Landing = () => {
 
       {/* RIGHT SIDE OF GRID */}
       <div className=" col-span-4 rounded-xl grid grid-rows-12 gap-y-4">
-        <div className="five bg-[#D2D4AD] text-black row-span-10 rounded-xl flex flex-col p-2">
+        <div className="five bg-[#D2D4AD]  text-black row-span-10 rounded-xl flex flex-col p-2">
           {/* 1st project */}
-          <div className="w-full rounded-xl shadow-2xl p-2">
+          <div className="w-full rounded-xl shadow-2xl p-2 ">
             <img src={productOneImg} alt="" className="h-[150px] w-full" />
             <div className="py-2 mb-1">
               <div className="flex flex-row justify-between">
