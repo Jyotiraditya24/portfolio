@@ -3,9 +3,9 @@ import { SiMinutemailer } from "react-icons/si";
 
 const Landing = () => {
   return (
-    <div className="w-full grid grid-cols-12">
+    <div className="w-full grid grid-cols-12 gap-x-4">
       {/* LEFT SIDE OF GRID */}
-      <div className="w-full grid col-span-8 grid-cols-8 lg:gap-6 2xl:gap-10">
+      <div className="w-full grid col-span-8 grid-cols-8 lg:gap-4 2xl:gap-10">
         {/* 1st */}
         <div className="col-span-5 bg-purple-500 rounded-xl pl-8 flex flex-col pt-2 pb-10 gap-y-10">
           <div className="flex flex-row w-full justify-end items-center p-5">
@@ -45,8 +45,16 @@ const Landing = () => {
       </div>
 
       {/* RIGHT SIDE OF GRID */}
-      <div className="col-span-4">
-        <div></div>
+      <div className="col-span-4 rounded-xl grid grid-rows-12 gap-y-4">
+        <div className="bg-purple-500 row-span-10 rounded-xl"></div>
+
+        <div className="bg-purple-500 row-span-2 rounded-xl">
+          <div className="flex flex-row w-full justify-between items-center h-full px-10 font-asil">
+            <a href="">GITHUB</a>
+            <a href="">LEETCODE</a>
+            <a href="">LINKEDIN</a>
+          </div>
+        </div>
       </div>
     </div>
   );
