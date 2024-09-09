@@ -7,21 +7,23 @@ const Landing = () => {
       {/* LEFT SIDE OF GRID */}
       <div className="w-full grid col-span-8 grid-cols-8 lg:gap-4 2xl:gap-10">
         {/* 1st */}
-        <div className="col-span-5 bg-purple-500 rounded-xl pl-8 flex flex-col pt-2 pb-10 gap-y-10">
+        <div className="col-span-5 bg-[#343233] text-white rounded-xl pl-8 flex flex-col pt-2 pb-10 gap-y-10">
           <div className="flex flex-row w-full justify-end items-center p-5">
             <div className="rounded-full h-[100px] w-[100px] bg-white"></div>
           </div>
-          <div className="text-5xl font-playwrite text">Full Stack</div>
-          <div className="text-5xl font-playwrite">Web Developer</div>
+          <div className="text-5xl font-playwrite text-white">Full Stack</div>
+          <div className="text-5xl font-playwrite text-white">
+            Web Developer
+          </div>
         </div>
         {/* 2nd */}
-        <div className="col-span-3 bg-purple-500 rounded-xl"></div>
+        <div className="col-span-3 bg-[#3B5639] text-white rounded-xl"></div>
         {/* 3rd */}
-        <div className="col-span-4 bg-purple-500 flex flex-col rounded-xl px-6">
+        <div className="col-span-4 bg-[#c7B144] text-white flex flex-col rounded-xl px-6">
           <div className="flex flex-row w-full justify-start items-center py-4">
             <div className="rounded-full h-[100px] w-[100px] bg-white"></div>
           </div>
-          <p className="font-asil pb-3 font-bold">
+          <p className="font-asil pb-3 font-bold text-white">
             Dynamic Full Stack Developer crafting scalable MERN applications.
             Leverages React and Next.js to engineer robust frontend. Deploying
             seamlessly with Docker. Contributing actively to open-source
@@ -29,16 +31,18 @@ const Landing = () => {
           </p>
         </div>
         {/* 4th  */}
-        <div className="col-span-4 bg-purple-500 rounded-xl px-4 py-4 h-full">
+        <div className="col-span-4 bg-[#EB7739] text-white rounded-xl px-4 py-4 h-full">
           <div className="flex flex-col h-full">
             <div className="flex flex-row w-full justify-between items-center">
-              <p> Have some Question?</p>
+              <p className="font-asil font-bold">Have some Question?</p>
               <div>
                 <SiMinutemailer size={30} />
               </div>
             </div>
             <div className="mt-auto">
-              <p className="font-bold text-4xl font-asil">Contant me</p>
+              <p className="font-bold text-5xl font-asil tracking-wider">
+                Contact me
+              </p>
             </div>
           </div>
         </div>
@@ -46,13 +50,39 @@ const Landing = () => {
 
       {/* RIGHT SIDE OF GRID */}
       <div className="col-span-4 rounded-xl grid grid-rows-12 gap-y-4">
-        <div className="bg-purple-500 row-span-10 rounded-xl"></div>
+        <div className="bg-[#D2D4AD] text-white row-span-10 rounded-xl"></div>
 
-        <div className="bg-purple-500 row-span-2 rounded-xl">
+        <div className="bg-[#7B3C45] text-white row-span-2 rounded-xl">
           <div className="flex flex-row w-full justify-between items-center h-full px-10 font-asil">
-            <a href="">GITHUB</a>
-            <a href="">LEETCODE</a>
-            <a href="">LINKEDIN</a>
+            <div className="hover:cursor-pointer px-4 py-2 text-white">
+              <a
+                href="https://github.com/Jyotiraditya24"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GITHUB
+              </a>
+            </div>
+
+            <div className="hover:cursor-pointer px-4 py-2 text-white">
+              <a
+                href="https://leetcode.com/u/jyotiraditya24/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LEETCODE
+              </a>
+            </div>
+
+            <div className="hover:cursor-pointer px-4 py-2 text-white">
+              <a
+                href="https://www.linkedin.com/in/jyotir-aditya-530160197/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LINKEDIN
+              </a>
+            </div>
           </div>
         </div>
       </div>
