@@ -11,47 +11,30 @@ import heroImg from "../assets/githubstreak.png";
 import productOneImg from "../assets/project-1.png";
 
 const Landing = () => {
-  useGSAP(() => {
-    let b = window.innerWidth / 2;
-    let l = window.innerHeight / 2;
-    gsap.from(".one", {
-      x: l,
-      y: b,
-      duration: 1,
-      delay: 1,
-    });
-    gsap.from(".two", {
-      x: l,
-      y: b,
-      scale: 0,
-      duration: 1,
-      delay: 1,
-    });
-    gsap.from(".three", {
-      x: l,
-      y: b,
-      duration: 1,
-      delay: 1,
-    });
-    gsap.from(".four", {
-      x: l,
-      y: b,
-      duration: 1,
-      delay: 1,
-    });
-    gsap.from(".five", {
-      x: l,
-      y: b,
-      duration: 1,
-      delay: 1,
-    });
-    gsap.from(".six", {
-      x: l,
-      y: b,
-      duration: 1,
-      delay: 1,
-    });
-  });
+ useGSAP(() => {
+   const centerX = window.innerWidth / 2;
+   const centerY = window.innerHeight / 2;
+
+   // Elements with similar animations
+   const elements = [".one", ".three", ".four", ".five", ".six"];
+   elements.forEach((element) => {
+     gsap.from(element, {
+       y: centerY,
+       duration: 1,
+       delay: 1,
+     });
+   });
+
+   // Special animation for ".two"
+   gsap.from(".two", {
+     x: centerX,
+     y: centerY,
+     scale: 0,
+     duration: 1,
+     delay: 1,
+   });
+ });
+
   return (
     <div className="w-full grid grid-cols-12 gap-x-4">
       {/* LEFT SIDE OF GRID */}
