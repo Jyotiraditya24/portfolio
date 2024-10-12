@@ -1,5 +1,6 @@
 import React from "react";
 import { SiMinutemailer } from "react-icons/si";
+import { AiFillGithub, AiFillEye } from "react-icons/ai";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import reactIcon from "../assets/icons8-react.svg";
@@ -9,31 +10,32 @@ import tsIcon from "../assets/icons8-typescript.svg";
 import tailwindcssIcon from "../assets/icons8-tailwindcss.svg";
 import heroImg from "../assets/githubstreak.png";
 import productOneImg from "../assets/project-1.png";
+import productTwoImg from "../assets/project-2.png";
 
 const Landing = () => {
- useGSAP(() => {
-   const centerX = window.innerWidth / 2;
-   const centerY = window.innerHeight / 2;
+  useGSAP(() => {
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
 
-   // Elements with similar animations
-   const elements = [".one", ".three", ".four", ".five", ".six"];
-   elements.forEach((element) => {
-     gsap.from(element, {
-       y: centerY,
-       duration: 1,
-       delay: 1,
-     });
-   });
+    // Elements with similar animations
+    const elements = [".one", ".three", ".four", ".five", ".six"];
+    elements.forEach((element) => {
+      gsap.from(element, {
+        y: centerY,
+        duration: 1,
+        delay: 1,
+      });
+    });
 
-   // Special animation for ".two"
-   gsap.from(".two", {
-     x: centerX,
-     y: centerY,
-     scale: 0,
-     duration: 1,
-     delay: 1,
-   });
- });
+    // Special animation for ".two"
+    gsap.from(".two", {
+      x: centerX,
+      y: centerY,
+      scale: 0,
+      duration: 1,
+      delay: 1,
+    });
+  });
 
   return (
     <div className="w-full grid grid-cols-12 gap-x-4">
@@ -90,9 +92,9 @@ const Landing = () => {
           <div className="flex flex-col h-full">
             <div className="flex flex-row w-full justify-between items-center">
               <p className="font-asil font-bold">Have some Question?</p>
-              <div>
+              <a href="mailto:jyotiraditya24@gmail.com" className="hover:cursor-pointer">
                 <SiMinutemailer size={30} />
-              </div>
+              </a>
             </div>
             <div className="mt-auto">
               <p className="font-bold text-5xl font-asil tracking-wider">
@@ -105,54 +107,77 @@ const Landing = () => {
 
       {/* RIGHT SIDE OF GRID */}
       <div className=" col-span-4 rounded-xl grid grid-rows-12 gap-y-4">
-        <div className="five bg-[#D2D4AD]  text-black row-span-10 rounded-xl flex flex-col p-2">
-          {/* 1st project */}
-          <div className="w-full rounded-xl shadow-2xl p-2 ">
-            <img src={productOneImg} alt="" className="h-[150px] w-full" />
-            <div className="py-2 mb-1">
-              <div className="flex flex-row justify-between">
-                <h1 className="font-bold font-asil">E-Commerce DashBoard</h1>
-                <a href="https://dashboard-lilac-phi.vercel.app/">Link</a>
-              </div>
-              <p className="font-asil">
-                Lorem ipsum dolor sit. Lorem ipsum dolor sit amet.
-              </p>
+        <div className="five bg-[#7B3C45] text-black row-span-12 rounded-xl flex flex-col p-2 gap-y-2 overflow-y-auto">
+          {/* PROJECT - 1 */}
+          <div className="bg-yellow-500 flex flex-col gap-y-3 p-4 w-full relative group rounded-xl">
+            <div>
+              <img src={productOneImg} alt="" />
             </div>
-
-            {/* 2nd Project */}
+            <div className="absolute w-full h-full bg-yellow-500 top-0 left-0 z-10 flex items-center justify-center gap-4 scale-0 group-hover:scale-100 transition-all duration-300">
+              <a href="https://github.com/Jyotiraditya24/Dashboard">
+                <AiFillGithub className="text-3xl hover:scale-110 transition-all duration-300" />
+              </a>
+              <a href="https://dashboard-lilac-phi.vercel.app/">
+                <AiFillEye className="text-3xl hover:scale-110 transition-all duration-300" />
+              </a>
+            </div>
+            <div className="flex flex-row justify-between items-center flex-wrap gap-y-2">
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                React
+              </span>
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                TypeScript
+              </span>
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                MongoDB
+              </span>
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                SCSS
+              </span>
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                ChartJs
+              </span>
+            </div>
           </div>
-        </div>
 
-        <div className="six bg-[#7B3C45] text-white row-span-2 rounded-xl">
-          <div className="flex flex-row w-full justify-between items-center h-full px-10 font-asil">
-            <div className="hover:cursor-pointer px-4 py-2 text-white">
-              <a
-                href="https://github.com/Jyotiraditya24"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GITHUB
+          {/* PROJECT - 2 */}
+          <div className="bg-yellow-500 flex flex-col gap-y-3 p-4 w-full relative group rounded-xl">
+            <div>
+              <img src={productTwoImg} />
+            </div>
+            <div className="absolute w-full h-full bg-yellow-500 top-0 left-0 z-10 flex items-center justify-center gap-4 scale-0 group-hover:scale-100 transition-all duration-300">
+              <a href="https://github.com/Jyotiraditya24/ecommerce">
+                <AiFillGithub className="text-3xl hover:scale-110 transition-all duration-300" />
+              </a>
+              <a href="shopfetti.onrender.com">
+                <AiFillEye className="text-3xl hover:scale-110 transition-all duration-300" />
               </a>
             </div>
-
-            <div className="hover:cursor-pointer px-4 py-2 text-white">
-              <a
-                href="https://leetcode.com/u/jyotiraditya24/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LEETCODE
-              </a>
-            </div>
-
-            <div className="hover:cursor-pointer px-4 py-2 text-white">
-              <a
-                href="https://www.linkedin.com/in/jyotir-aditya-530160197/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LINKEDIN
-              </a>
+            <div className="flex flex-row flex-start items-center flex-wrap gap-y-2 gap-x-2">
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                React
+              </span>
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                Redis
+              </span>
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                MongoDB
+              </span>
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                NodeJS
+              </span>
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                Express
+              </span>
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                Zustand
+              </span>
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                TailwindCss
+              </span>
+              <span className="bg-blur rounded-full py-2 px-3 text-white text-sm bg-black">
+                Framer
+              </span>
             </div>
           </div>
         </div>
